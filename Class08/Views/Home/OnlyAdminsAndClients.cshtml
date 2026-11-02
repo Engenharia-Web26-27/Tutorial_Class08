@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "OnlyAdmins";
+}
+
+<h1>This page is only for Aministrators and Clients</h1>
+
+<h1>Welcome @if (User.IsInRole("Admin"))
+    {
+        <span>Administrator</span>
+    }
+    else
+    {
+        <span>Client </span>
+    }
+    @User.Identity.Name
+    </h1>
